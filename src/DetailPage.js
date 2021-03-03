@@ -66,7 +66,6 @@ export default class DetailPage extends Component {
   render() {
     return (
       <div>
-        DETAIL PAGE
         <form onSubmit={this.handleSubmit}>
           <label>
             Kit-Kat Name:
