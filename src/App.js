@@ -20,7 +20,6 @@ export default class App extends Component {
             <Route path="/create" exact component={CreatePage} />
           </Switch>
         </Router>
-        <footer>Contact info goes here</footer>
       </div>
     );
   }

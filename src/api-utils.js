@@ -26,7 +26,7 @@ export async function makeKitkat(oneKitKat) {
 }
 
 export async function deleteKitKat(id) {
-  const { body } = request.delete(`${URL}/kitkats/${id}`);
+  const { body } = await request.delete(`${URL}/kitkats/${id}`);
 
   return body;
 }
@@ -36,3 +36,6 @@ export async function updateKitKat(id, oneKitKat) {
 
   return body;
 }
+
+export const getCategoryId = (kitkat, categories) =>
+  categories.find((category) => kitkat.category === category.name).id;

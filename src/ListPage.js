@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getKitKats } from './api-utils.js';
+import { Link } from 'react-router-dom';
 import Spinner from './Spinner.js';
 
 export default class ListPage extends Component {
@@ -22,14 +23,16 @@ export default class ListPage extends Component {
       <div className="list">
         {this.state.loading && <Spinner />}
         {this.state.kitkats.map((kitkat) => (
-          <div className="kitkats">
-            <p>{kitkat.name}</p>
-            <p>{kitkat.category}</p>
-            <p>{kitkat.description}</p>
-            <p>{kitkat.is_flavored}</p>
-            <p>{kitkat.size}</p>
-            <p>{kitkat.price}</p>
-          </div>
+          <Link to={`/kitkats/${kitkat.id}`} key={kitkat.name}>
+            <div className="kitkats">
+              <p>{kitkat.name}</p>
+              <p>{kitkat.description}</p>
+              <p>{kitkat.category}</p>
+              <p>{kitkat.is_flavored}</p>
+              <p>{kitkat.size}</p>
+              <p>{kitkat.price}</p>
+            </div>
+          </Link>
         ))}
       </div>
     );

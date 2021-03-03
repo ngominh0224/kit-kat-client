@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default class Header extends Component {
   render() {
     return (
-      <div>
+      <div className="navbar">
         <NavLink exact activeClassName="active" to="/">
           Home
         </NavLink>
