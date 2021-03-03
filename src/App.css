@@ -42,7 +42,7 @@
 }
 
 .active {
-  color: magenta;
+  color: white;
   margin: 100px;
   padding: 100px;
   display: inline;
@@ -63,12 +63,13 @@
 }
 
 .form1 {
-  background-color: red;
+  background-color: rgb(175, 215, 248);
 }
 
 .welcome {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   font-size: 50px;
+  background-image: url(https://thumbs.dreamstime.com/b/kit-kat-chocolate-bars-red-wrapping-lies-yellow-background-created-rowntree-s-york-united-kingdom-ny-usa-december-168037840.jpg);
+  height: 500px;
 }
