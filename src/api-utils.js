@@ -26,7 +26,7 @@ export async function makeKitkat(oneKitKat) {
 }
 
 export async function deleteKitKat(id) {
-  const { body } = request.delete(`${URL}/kitkats/${id}`);
+  const { body } = await request.delete(`${URL}/kitkats/${id}`);
 
   return body;
 }

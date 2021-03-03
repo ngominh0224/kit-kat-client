@@ -4,6 +4,7 @@ import {
   getCategories,
   updateKitKat,
   getCategoryId,
+  deleteKitKat,
 } from './api-utils.js';
 
 export default class DetailPage extends Component {
@@ -52,6 +53,12 @@ export default class DetailPage extends Component {
     e.preventDefault();
 
     await updateKitKat(this.props.match.params.kitkatId, this.state);
+
+    this.props.history.push('/kitkats');
+  };
+
+  handleDelete = async () => {
+    await deleteKitKat(this.props.match.params.kitkatId);
 
     this.props.history.push('/kitkats');
   };
@@ -111,6 +118,7 @@ export default class DetailPage extends Component {
           </label>
           <button>Update</button>
         </form>
+        <button onClick={this.handleDelete}>Delete Item</button>
       </div>
     );
   }

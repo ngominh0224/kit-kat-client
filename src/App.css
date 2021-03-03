@@ -37,8 +37,16 @@
   }
 }
 
+.navbar {
+  background: rgb(255, 133, 133);
+}
+
 .active {
   color: magenta;
+  margin: 100px;
+  padding: 100px;
+  display: inline;
+  padding-left: 50px;
 }
 
 .kitkats {
@@ -52,4 +60,15 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+}
+
+.form1 {
+  background-color: red;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 50px;
 }

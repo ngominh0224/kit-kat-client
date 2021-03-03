@@ -39,7 +39,7 @@ export default class CreatePage extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="form1" onSubmit={this.handleSubmit}>
           <label>
             Kit-Kat Name:
             <input value={this.state.name} onChange={this.handleNameChange} />
